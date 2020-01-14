@@ -1,0 +1,1121 @@
+= spring-boot-starter-swagger
+
+
+[[_overview]]
+== Overview
+Starter for swagger 2.x
+
+
+=== Version information
+[%hardbreaks]
+__Version__ : 1.4.0.RELEASE
+
+
+=== Contact information
+[%hardbreaks]
+__Contact__ : YangYuFei
+__Contact Email__ : 951462260@qq.com
+
+
+=== License information
+[%hardbreaks]
+__License__ : Apache License, Version 2.0
+__License URL__ : https://www.apache.org/licenses/LICENSE-2.0.html
+__Terms of service__ : https://github.com/dyc87112/spring-boot-starter-swagger
+
+
+=== URI scheme
+[%hardbreaks]
+__Host__ : localhost:8888
+__BasePath__ : /
+
+
+=== Tags
+
+* 1-地区Api : Place Controller
+* 2-观察目标用户Api : User Controller
+
+
+
+
+[[_paths]]
+== Paths
+
+[[_addoneusingput]]
+=== 添加地区信息
+....
+PUT /place
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**addAndModifyPlaceRequest** +
+__required__|addAndModifyPlaceRequest|<<_addandmodifyplacerequest,AddAndModifyPlaceRequest>>
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_baseresponse,BaseResponse>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `\*/*`
+
+
+==== Tags
+
+* 1-地区Api
+
+
+==== Security
+
+[options="header", cols=".^3a,.^4a,.^13a"]
+|===
+|Type|Name|Scopes
+|**apiKey**|**<<_authorization,Authorization>>**|global
+|===
+
+
+[[_deloneusingdelete]]
+=== 删除地区信息
+....
+DELETE /place
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**delOnePlaceRequest** +
+__required__|delOnePlaceRequest|<<_deloneplacerequest,DelOnePlaceRequest>>
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_baseresponse,BaseResponse>>
+|**204**|No Content|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|===
+
+
+==== Produces
+
+* `\*/*`
+
+
+==== Tags
+
+* 1-地区Api
+
+
+==== Security
+
+[options="header", cols=".^3a,.^4a,.^13a"]
+|===
+|Type|Name|Scopes
+|**apiKey**|**<<_authorization,Authorization>>**|global
+|===
+
+
+[[_getallusingget]]
+=== 获取所有地区信息
+....
+GET /place/all
+....
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_fe4bfbf7ceb79acd0b78f504ddcfc7b8,BaseResponse«List«PlaceDTO»»>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Produces
+
+* `\*/*`
+
+
+==== Tags
+
+* 1-地区Api
+
+
+==== Security
+
+[options="header", cols=".^3a,.^4a,.^13a"]
+|===
+|Type|Name|Scopes
+|**apiKey**|**<<_authorization,Authorization>>**|global
+|===
+
+
+[[_getimgusingget]]
+=== 修改user ，包括删除
+....
+GET /place/img
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**imgUrl** +
+__required__|imgUrl|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Produces
+
+* `\*/*`
+
+
+==== Tags
+
+* 1-地区Api
+
+
+==== Security
+
+[options="header", cols=".^3a,.^4a,.^13a"]
+|===
+|Type|Name|Scopes
+|**apiKey**|**<<_authorization,Authorization>>**|global
+|===
+
+
+[[_modifyoneusingpost]]
+=== 修改地区信息
+....
+POST /place/modify
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**addAndModifyPlaceRequest** +
+__required__|addAndModifyPlaceRequest|<<_addandmodifyplacerequest,AddAndModifyPlaceRequest>>
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_baseresponse,BaseResponse>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `\*/*`
+
+
+==== Tags
+
+* 1-地区Api
+
+
+==== Security
+
+[options="header", cols=".^3a,.^4a,.^13a"]
+|===
+|Type|Name|Scopes
+|**apiKey**|**<<_authorization,Authorization>>**|global
+|===
+
+
+[[_getallusingget_1]]
+=== 获取对应placeId 的统计信息
+....
+GET /place/statistical
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**placeId** +
+__required__|placeId|integer (int32)
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_cbad1d3a357e37f486b5aef67eed7158,BaseResponse«StatisticalResponse»>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Produces
+
+* `\*/*`
+
+
+==== Tags
+
+* 1-地区Api
+
+
+==== Security
+
+[options="header", cols=".^3a,.^4a,.^13a"]
+|===
+|Type|Name|Scopes
+|**apiKey**|**<<_authorization,Authorization>>**|global
+|===
+
+
+[[_uploadimgusingpost]]
+=== 修改user ，包括删除
+....
+POST /place/uploadImg
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**modifyPlaceRequest** +
+__required__|modifyPlaceRequest|<<_modifyplacerequest,ModifyPlaceRequest>>
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_baseresponse,BaseResponse>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `\*/*`
+
+
+==== Tags
+
+* 1-地区Api
+
+
+==== Security
+
+[options="header", cols=".^3a,.^4a,.^13a"]
+|===
+|Type|Name|Scopes
+|**apiKey**|**<<_authorization,Authorization>>**|global
+|===
+
+
+[[_getallusingget_2]]
+=== 获取所有目标用户信息
+....
+GET /user/all
+....
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|< <<_a329a1cc8cbe573b6eb41eb721956ad4,观察目标用户实体类>> > array
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Produces
+
+* `\*/*`
+
+
+==== Tags
+
+* 2-观察目标用户Api
+
+
+==== Security
+
+[options="header", cols=".^3a,.^4a,.^13a"]
+|===
+|Type|Name|Scopes
+|**apiKey**|**<<_authorization,Authorization>>**|global
+|===
+
+
+[[_modifyusingpost]]
+=== 修改user ，包括删除
+....
+POST /user/modify
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**modifyUserRequest** +
+__required__|modifyUserRequest|<<_modifyuserrequest,ModifyUserRequest>>
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_baseresponse,BaseResponse>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `\*/*`
+
+
+==== Tags
+
+* 2-观察目标用户Api
+
+
+==== Security
+
+[options="header", cols=".^3a,.^4a,.^13a"]
+|===
+|Type|Name|Scopes
+|**apiKey**|**<<_authorization,Authorization>>**|global
+|===
+
+
+[[_addmoreusingpost]]
+=== 一次性添加多个数据
+....
+POST /user/more
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**addMoreUserRequest** +
+__required__|addMoreUserRequest|<<_addmoreuserrequest,AddMoreUserRequest>>
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_baseresponse,BaseResponse>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `\*/*`
+
+
+==== Tags
+
+* 2-观察目标用户Api
+
+
+==== Security
+
+[options="header", cols=".^3a,.^4a,.^13a"]
+|===
+|Type|Name|Scopes
+|**apiKey**|**<<_authorization,Authorization>>**|global
+|===
+
+
+[[_addoneusingpost]]
+=== 添加一个数据
+....
+POST /user/one
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**addOneUserRequest** +
+__required__|addOneUserRequest|<<_addoneuserrequest,AddOneUserRequest>>
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_baseresponse,BaseResponse>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `\*/*`
+
+
+==== Tags
+
+* 2-观察目标用户Api
+
+
+==== Security
+
+[options="header", cols=".^3a,.^4a,.^13a"]
+|===
+|Type|Name|Scopes
+|**apiKey**|**<<_authorization,Authorization>>**|global
+|===
+
+
+[[_pageusingpost]]
+=== 条件查询所有User 对象并分页
+....
+POST /user/page
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**findPageUserRequest** +
+__required__|findPageUserRequest|<<_findpageuserrequest,FindPageUserRequest>>
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_9b23f8f58b6a3541eda6ccb1872a7ce7,BaseResponse«Page«观察目标用户实体类»»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `\*/*`
+
+
+==== Tags
+
+* 2-观察目标用户Api
+
+
+==== Security
+
+[options="header", cols=".^3a,.^4a,.^13a"]
+|===
+|Type|Name|Scopes
+|**apiKey**|**<<_authorization,Authorization>>**|global
+|===
+
+
+[[_testusingget]]
+=== 条件查询所有User 对象并分页
+....
+GET /user/test
+....
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Produces
+
+* `\*/*`
+
+
+==== Tags
+
+* 2-观察目标用户Api
+
+
+==== Security
+
+[options="header", cols=".^3a,.^4a,.^13a"]
+|===
+|Type|Name|Scopes
+|**apiKey**|**<<_authorization,Authorization>>**|global
+|===
+
+
+
+
+[[_definitions]]
+== Definitions
+
+[[_addandmodifyplacerequest]]
+=== AddAndModifyPlaceRequest
+
+[options="header", cols=".^3a,.^11a,.^4a"]
+|===
+|Name|Description|Schema
+|**placeId** +
+__optional__|记录地点ID|integer (int32)
+|**placeName** +
+__optional__|记录地点名称|string
+|===
+
+
+[[_addmoreuserrequest]]
+=== AddMoreUserRequest
+
+[options="header", cols=".^3a,.^11a,.^4a"]
+|===
+|Name|Description|Schema
+|**ageValues** +
+__optional__|年龄|< string > array
+|**attributeFeature** +
+__optional__|属性特征|< string > array
+|**buyBehavior** +
+__optional__|购买前行为|< string > array
+|**buyBehaviorOther** +
+__optional__|购买前行为其他项|string
+|**effectiveTime** +
+__optional__|有效时间|integer (int32)
+|**looksFeatures** +
+__optional__|体态特征|< string > array
+|**occupationValues** +
+__optional__|职业|< string > array
+|**placeId** +
+__optional__|记录地点ID|integer (int32)
+|**sexValues** +
+__optional__|性别|< string > array
+|**spend** +
+__optional__|花费|integer (int32)
+|**teamNumber** +
+__optional__|组队人数|integer (int32)
+|**waitTime** +
+__optional__|等待时间|integer (int32)
+|**wearingFeatures** +
+__optional__|穿着|< string > array
+|**wearingOther** +
+__optional__|穿着其他项|string
+|===
+
+
+[[_addoneuserrequest]]
+=== AddOneUserRequest
+
+[options="header", cols=".^3a,.^11a,.^4a"]
+|===
+|Name|Description|Schema
+|**ageValue** +
+__optional__|年龄|string
+|**attributeFeature** +
+__optional__|属性特征|< string > array
+|**buyBehavior** +
+__optional__|购买前行为|< string > array
+|**buyBehaviorOther** +
+__optional__|购买前行为其他项|string
+|**effectiveTime** +
+__optional__|有效时间|integer (int32)
+|**looksFeature** +
+__optional__|体态特征|string
+|**occupationValue** +
+__optional__|职业|string
+|**placeId** +
+__optional__|记录地点ID|integer (int32)
+|**sexValue** +
+__optional__|性别|string
+|**spend** +
+__optional__|花费|integer (int32)
+|**waitTime** +
+__optional__|等待时间|integer (int32)
+|**wearingFeatures** +
+__optional__|穿着|< string > array
+|**wearingOther** +
+__optional__|穿着其他项|string
+|===
+
+
+[[_baseresponse]]
+=== BaseResponse
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**code** +
+__optional__|integer (int32)
+|**info** +
+__optional__|object
+|**msg** +
+__optional__|string
+|===
+
+
+[[_fe4bfbf7ceb79acd0b78f504ddcfc7b8]]
+=== BaseResponse«List«PlaceDTO»»
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**code** +
+__optional__|integer (int32)
+|**info** +
+__optional__|< <<_placedto,PlaceDTO>> > array
+|**msg** +
+__optional__|string
+|===
+
+
+[[_9b23f8f58b6a3541eda6ccb1872a7ce7]]
+=== BaseResponse«Page«观察目标用户实体类»»
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**code** +
+__optional__|integer (int32)
+|**info** +
+__optional__|<<_619b83ee1e1b4c77b1440899ddabf34a,Page«观察目标用户实体类»>>
+|**msg** +
+__optional__|string
+|===
+
+
+[[_cbad1d3a357e37f486b5aef67eed7158]]
+=== BaseResponse«StatisticalResponse»
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**code** +
+__optional__|integer (int32)
+|**info** +
+__optional__|<<_statisticalresponse,StatisticalResponse>>
+|**msg** +
+__optional__|string
+|===
+
+
+[[_deloneplacerequest]]
+=== DelOnePlaceRequest
+
+[options="header", cols=".^3a,.^11a,.^4a"]
+|===
+|Name|Description|Schema
+|**placeId** +
+__optional__|记录地点ID|integer (int32)
+|===
+
+
+[[_findpageuserrequest]]
+=== FindPageUserRequest
+
+[options="header", cols=".^3a,.^11a,.^4a"]
+|===
+|Name|Description|Schema
+|**attributeFeatures** +
+__optional__|属性特征|string
+|**buyBehavior** +
+__optional__|购买前行为|string
+|**currentPage** +
+__optional__|页数|integer (int32)
+|**effectiveTimeEnd** +
+__optional__|有效时间结束|integer (int32)
+|**effectiveTimeStart** +
+__optional__|有效时间开始|integer (int32)
+|**looksFeatures** +
+__optional__|外貌特征|string
+|**pageSize** +
+__optional__|页面显示条数|integer (int32)
+|**sex** +
+__optional__|性别|integer (int32)
+|**spendEnd** +
+__optional__|花费右区间|integer (int32)
+|**spendStart** +
+__optional__|花费左区间|integer (int32)
+|**teamNum** +
+__optional__|组队人数|integer (int32)
+|**teamUuid** +
+__optional__|用户组队的编号|string
+|**uuid** +
+__optional__|用户编号|string
+|**waitTimeEnd** +
+__optional__|等待时间结束|integer (int32)
+|**waitTimeStart** +
+__optional__|等待时间开始|integer (int32)
+|**wearingFeatures** +
+__optional__|穿着|string
+|===
+
+
+[[_modifyplacerequest]]
+=== ModifyPlaceRequest
+
+[options="header", cols=".^3a,.^11a,.^4a"]
+|===
+|Name|Description|Schema
+|**file** +
+__optional__|图片|string
+|**modifyId** +
+__optional__|记录地点Id|string
+|===
+
+
+[[_modifyuserrequest]]
+=== ModifyUserRequest
+
+[options="header", cols=".^3a,.^11a,.^4a"]
+|===
+|Name|Description|Schema
+|**modifyDelete** +
+__optional__|删除标记|integer (int32)
+|**modifyEffTime** +
+__optional__|有效时间|integer (int32)
+|**modifyId** +
+__optional__|对象Id|string
+|**modifySpend** +
+__optional__|消费金额|integer (int32)
+|**modifyWaitTime** +
+__optional__|等待时间|integer (int32)
+|===
+
+
+[[_pageable]]
+=== Pageable
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**offset** +
+__optional__|integer (int64)
+|**pageNumber** +
+__optional__|integer (int32)
+|**pageSize** +
+__optional__|integer (int32)
+|**paged** +
+__optional__|boolean
+|**sort** +
+__optional__|<<_sort,Sort>>
+|**unpaged** +
+__optional__|boolean
+|===
+
+
+[[_619b83ee1e1b4c77b1440899ddabf34a]]
+=== Page«观察目标用户实体类»
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**content** +
+__optional__|< <<_a329a1cc8cbe573b6eb41eb721956ad4,观察目标用户实体类>> > array
+|**first** +
+__optional__|boolean
+|**last** +
+__optional__|boolean
+|**number** +
+__optional__|integer (int32)
+|**numberOfElements** +
+__optional__|integer (int32)
+|**pageable** +
+__optional__|<<_pageable,Pageable>>
+|**size** +
+__optional__|integer (int32)
+|**sort** +
+__optional__|<<_sort,Sort>>
+|**totalElements** +
+__optional__|integer (int64)
+|**totalPages** +
+__optional__|integer (int32)
+|===
+
+
+[[_placedto]]
+=== PlaceDTO
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**id** +
+__optional__|integer (int32)
+|**imgUrl** +
+__optional__|string
+|**name** +
+__optional__|string
+|===
+
+
+[[_sort]]
+=== Sort
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**sorted** +
+__optional__|boolean
+|**unsorted** +
+__optional__|boolean
+|===
+
+
+[[_statisticalresponse]]
+=== StatisticalResponse
+
+[options="header", cols=".^3a,.^11a,.^4a"]
+|===
+|Name|Description|Schema
+|**age1** +
+__optional__|年龄：小学生|integer (int32)
+|**age2** +
+__optional__|年龄：中学生|integer (int32)
+|**age3** +
+__optional__|年龄：大学生|integer (int32)
+|**age4** +
+__optional__|年龄：青年|integer (int32)
+|**age5** +
+__optional__|年龄：中年|integer (int32)
+|**age6** +
+__optional__|年龄：老年|integer (int32)
+|**buyBChat** +
+__optional__|购买前行为：聊天|integer (int32)
+|**buyBCheck** +
+__optional__|购买前行为：检查优惠|integer (int32)
+|**buyBLook** +
+__optional__|购买前行为：浏览商品|integer (int32)
+|**buyBOther** +
+__optional__|购买前行为：其他|integer (int32)
+|**buyBPhone** +
+__optional__|购买前行为：玩手机|integer (int32)
+|**buyBThink** +
+__optional__|购买前行为：发呆|integer (int32)
+|**eff1** +
+__optional__|有效时间：30s|integer (int32)
+|**eff2** +
+__optional__|有效时间：60s|integer (int32)
+|**eff3** +
+__optional__|有效时间：90s|integer (int32)
+|**eff4** +
+__optional__|有效时间：120s|integer (int32)
+|**eff5** +
+__optional__|有效时间：160s|integer (int32)
+|**eff6** +
+__optional__|有效时间：160s+|integer (int32)
+|**female** +
+__optional__|年龄：女性|integer (int32)
+|**male** +
+__optional__|性别：男性|integer (int32)
+|**time1** +
+__optional__|时间段：上午9点-12点|integer (int32)
+|**time2** +
+__optional__|时间段：中午12点-3点|integer (int32)
+|**time3** +
+__optional__|时间段：下午3点-6点|integer (int32)
+|**time4** +
+__optional__|时间段：下午6点-晚间9点|integer (int32)
+|**wait1** +
+__optional__|等待时间：30s|integer (int32)
+|**wait2** +
+__optional__|等待时间：60s|integer (int32)
+|**wait3** +
+__optional__|等待时间：90s|integer (int32)
+|**wait4** +
+__optional__|等待时间：120s|integer (int32)
+|**wait5** +
+__optional__|等待时间：160s|integer (int32)
+|**wait6** +
+__optional__|等待时间：160s+|integer (int32)
+|===
+
+
+[[_a329a1cc8cbe573b6eb41eb721956ad4]]
+=== 观察目标用户实体类
+
+[options="header", cols=".^3a,.^11a,.^4a"]
+|===
+|Name|Description|Schema
+|**addPlaceId** +
+__optional__|记录地点id 不能为NULL|integer (int32)
+|**age** +
+__optional__|年龄（0 小学生 1 中学生 2 大学生 3 青年 4 中年 5 老年）多人时用英文逗号隔开|string
+|**attributeFeatures** +
+__optional__|属性特征（0 情侣 1 外国人 2 拎着很多东西 3 家庭成员）多人时按顺序逗号隔开|string
+|**buyBehavior** +
+__optional__|购买前行为（0 玩手机 1 聊天 2 发呆 3 浏览展品 4 检查优惠 其他）多人时取普遍行为|string
+|**effectiveTime** +
+__optional__|展区视野停留时间（单位：秒）|integer (int32)
+|**id** +
+__optional__|主键id|integer (int32)
+|**inTime** +
+__optional__|进店时间|string (date-time)
+|**isBuy** +
+__optional__|是否购买（0 否 1 是）|integer (int32)
+|**isTeam** +
+__optional__|是否组队（0 否 1 是）|integer (int32)
+|**looksFeatures** +
+__optional__|外貌特征（0 胖 1 中等身材 2 瘦）多人时按顺序以英文逗号隔开|string
+|**occupation** +
+__optional__|职业 多人时用英文逗号隔开|string
+|**sex** +
+__optional__|性别（0 男 1 女）多人时用英文逗号隔开|string
+|**spend** +
+__optional__|花费金额（单位：元）|integer (int32)
+|**teamNum** +
+__optional__|组队人数（默认为0）|integer (int32)
+|**teamUuid** +
+__optional__|用户组队的唯一编号|string
+|**updateTime** +
+__optional__|默认更新时间|string (date-time)
+|**uuid** +
+__optional__|用户唯一编号 不能为NULL|string
+|**waitTime** +
+__optional__|等待时间（单位：秒）|integer (int32)
+|**wearingFeatures** +
+__optional__|穿着特征（0 正式 1 休闲 2 华贵 3 运动 其他）多人时按顺序以英文逗号隔开|string
+|===
+
+
+
+
+[[_securityscheme]]
+== Security
+
+[[_authorization]]
+=== Authorization
+[%hardbreaks]
+__Type__ : apiKey
+__Name__ : TOKEN
+__In__ : HEADER
+
+
+

@@ -1,0 +1,15 @@
+${AnsiColor.BLUE}
+       ########  ####  ######      ########  ##          ###    ##    ##
+       ##     ##  ##  ##    ##     ##     ## ##         ## ##   ###   ##
+       ##     ##  ##  ##           ##     ## ##        ##   ##  ####  ##
+       ########   ##  ##   ####    ########  ##       ##     ## ## ## ##
+       ##     ##  ##  ##    ##     ##        ##       ######### ##  ####
+       ##     ##  ##  ##    ##     ##        ##       ##     ## ##   ###
+       ########  ####  ######      ##        ######## ##     ## ##    ##
+
+producer: 伟大的杨宇飞
+Application Version: ${application.version}${application.formatted-version}
+Spring Boot Version: ${spring-boot.version}${spring-boot.formatted-version}
+${AnsiColor.BRIGHT_RED}
+--------------------------------------------------------------------------------
+${AnsiStyle.NORMAL}
